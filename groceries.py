@@ -47,7 +47,7 @@ products = [
 
 # format applier courtesy of Dan Gode's class financial statement analytics 
 
-def alpha_sorted(inventory):
+def alpha_sorted_products(inventory):
     sorted_inventory = sorted(inventory, key = lambda k: k['name'])
     print('________________________________')
     print('There are', len(sorted_inventory), 'products')
@@ -55,4 +55,23 @@ def alpha_sorted(inventory):
     for item in range(0,len(sorted_inventory)):
         print('+',sorted_inventory[item]['name'], "(${:,.2f})".format(sorted_inventory[item]['price']))
 
-alpha_sorted(products)
+def alpha_sorted_departments(inventory):
+    unique_departments = []
+    for depts in range(0, len(inventory)):
+        unique_departments.append(inventory[depts]['department'])
+    set_departments = set(unique_departments)
+    listed_dept = list(set_departments)
+    listed_dept.sort()
+    final_departments = []
+    for department in listed_dept:
+        item_count = 0
+        for item in range(0, len(inventory)):
+            if inventory[item]['department'] == department:
+                item_count += 1
+            else:
+                pass
+        final_departments.append({'department': department, 'item_count': item_count})
+
+    print(final_departments)
+
+alpha_sorted_departments(products)    
