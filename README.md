@@ -8,4 +8,11 @@ A script that takes one input to run through two functions, sorting the ouput by
 
 ## Installation
 Feel free to fork this repo! You can then download it onto your local machine using either git or the gui interface on Github.com's site.
+Navigate to the repo once you've got it downloaded.
+
+Use Anaconda to create and activate a new enviroment, I called my groceries-env
+```
+conda create -n groceries-env
+conda activate groceries-env
+```
 
