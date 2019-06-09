@@ -49,6 +49,9 @@ products = [
 
 def alpha_sorted(inventory):
     sorted_inventory = sorted(inventory, key = lambda k: k['name'])
+    print('________________________________')
+    print('There are', len(sorted_inventory), 'products')
+    print('________________________________')
     for item in range(0,len(sorted_inventory)):
         print('+',sorted_inventory[item]['name'], "(${:,.2f})".format(sorted_inventory[item]['price']))
 
