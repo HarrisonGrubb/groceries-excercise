@@ -1,5 +1,5 @@
 # Groceries Excercise
-A script that takes one input to run through two functions, sorting the ouput by product and department.
+My attempt at following the assignment **without** watching the video.  The program works.  I'll try to build some tests later. 
 
 ## Prerequisites
 * Python 3.7
