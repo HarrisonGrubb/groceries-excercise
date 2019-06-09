@@ -15,4 +15,14 @@ Use Anaconda to create and activate a new enviroment, I called my groceries-env
 conda create -n groceries-env
 conda activate groceries-env
 ```
+## Usage 
+Run the recommendation script:
+```
+python groceries.py
 
+```
+
+And the file will output the results
+
+## Potential Changes in Future
+It may be updated to read in a file and organize the output, or this may be the final iteration...who knows!
