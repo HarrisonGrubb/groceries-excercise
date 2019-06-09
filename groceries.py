@@ -45,9 +45,11 @@ products = [
 #lambda function courtesy of stackoverflow :)  
 #https://stackoverflow.com/questions/72899/how-do-i-sort-a-list-of-dictionaries-by-a-value-of-the-dictionary
 
+# format applier courtesy of Dan Gode's class financial statement analytics 
+
 def alpha_sorted(inventory):
     sorted_inventory = sorted(inventory, key = lambda k: k['name'])
     for item in range(0,len(sorted_inventory)):
-        print('+',sorted_inventory[item]['name'], sorted_inventory[item]['price'])
+        print('+',sorted_inventory[item]['name'], "(${:,.2f})".format(sorted_inventory[item]['price']))
 
 alpha_sorted(products)
