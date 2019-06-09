@@ -42,10 +42,17 @@ products = [
 # for item in names:
 #     print(f"\n {item}")
 
+#attributions ##########################################################
 #lambda function courtesy of stackoverflow :)  
 #https://stackoverflow.com/questions/72899/how-do-i-sort-a-list-of-dictionaries-by-a-value-of-the-dictionary
 
+#set fix courtesy of stackoverflow :)
+#https://stackoverflow.com/questions/7961363/removing-duplicates-in-python-lists
+
 # format applier courtesy of Dan Gode's class financial statement analytics 
+#attributions ##########################################################
+
+
 
 def alpha_sorted_products(inventory):
     sorted_inventory = sorted(inventory, key = lambda k: k['name'])
@@ -71,7 +78,17 @@ def alpha_sorted_departments(inventory):
             else:
                 pass
         final_departments.append({'department': department, 'item_count': item_count})
+    print('________________________________')
+    print('There are', len(final_departments), 'departments')
+    print('________________________________')
+    for items_to_print in range(0,len(final_departments)):
+        if final_departments[items_to_print]['item_count'] > 1:
+            print('+',final_departments[items_to_print]['department'].capitalize(), "(",final_departments[items_to_print]['item_count'], 'products)')
+        else:
+            print('+',final_departments[items_to_print]['department'].capitalize(), "(",final_departments[items_to_print]['item_count'], 'product)')
 
-    print(final_departments)
+def combined(inventory):
+    alpha_sorted_products(inventory)
+    alpha_sorted_departments(inventory)
 
-alpha_sorted_departments(products)    
+combined(products)
